@@ -1,0 +1,42 @@
+<style>
+    div {
+        height: calc(100% / 12);
+    }
+</style>
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    /*
+        Use each() to loop through all elements in the collection. 
+        Provide each() with a function which will be run on each
+        of the elements. 
+    */
+    $("div").each(function(i){
+        // divide the color wheel into 12 parts to set the hue. 
+        var hue = 360 / 12 * i;
+        // make a style rule string with the hue. 
+        var color = "hsl("+hue+", 100%, 50%)";
+        // Set the css of "this" div
+        $(this).css({backgroundColor:color});
+    });
+</script>
+
+
+
+
+
+

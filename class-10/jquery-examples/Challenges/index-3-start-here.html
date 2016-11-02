@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            border: 6px solid #000;
+            position: relative;
+            margin: auto;
+            
+        }
+        
+        .main {
+            position: absolute;
+            transition: 500ms;
+        }
+        
+        .main > div {
+            width: 400px;
+        }
+        
+        .links {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .links > li {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            
+        </div>
+    </div>
+    
+    <ul class="links">
+        
+    </ul>
+
+
+
+    <!-- Templates -->
+    
+    <!-- Movie template - displays a movie -->
+    <script id="movie-template" type="text/x-handlebars-template">
+        <div id="{{id}}" class="movie">
+            <h1>{{im:name.label}}</h1>
+            <div class="body">
+                <p><img src="{{im:image.2.label}}">{{summary.label}}</p>
+            </div>
+        </div>
+    </script>
+    
+    <!-- link template - displays a link for a movie -->
+    <script id="link-template" type="text/x-handlebars-template">
+        <li class="movie-link">{{im:name.label}}</li>
+    </script>
+
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="handlebars-v4.0.5.js"></script>
+    <script>
+        // Compile templates
+        var movieTemplate = Handlebars.compile($("#movie-template").html());
+        var linkTemplate = Handlebars.compile($("#link-template").html());
+        
+        // Load JSON data from iTunes
+        $.get("https://itunes.apple.com/us/rss/topmovies/limit=10/json", function (data) {
+            // Convert JSON to JS objects
+            var json = JSON.parse(data);
+            var entries = json.feed.entry;
+
+            // Make a couple variables to hold the movie and link markup
+            var html = "";
+            var links = "";
+            
+            // Loop through all entries
+            for (i in entries) {
+                // Uncomment this line to log the entry objects
+                // console.log(entries[i]);
+                // Pass the entry objects into the template functions
+                html += movieTemplate(entries[i]);
+                links += linkTemplate(entries[i]);
+            }
+            
+            // Display the generated template text in the page
+            $(".main").html(html);
+            $(".links").html(links);
+        });
+        
+        // *** Important! ***
+        // .movie-link do not exist at the time this function is run. 
+        // Here you have added a function to body tag. Click events 
+        // that occur on the body are filtered for .movie-link. 
+        $("body").on("click", ".movie-link", function(event){
+            var index = $(this).index();
+            var top = $(".movie").eq(index).position().top;
+            // ...
+        });
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.header {
+    height: 300px;
+}
+
+.header h1 {
+    line-height: 300px;
+    text-align: center;
+}
+
+.student-img {
+    height: 300px;
+    background-color: antiquewhite;
+}
+
+.steps {
+    text-align: center;
+}
+
+.center-title {
+    text-align: center;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#nav a {
+    display: block;
+    float: left;
+    padding: 1em;
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+
+/* Needed for Nav styles!!!!!! */
+.selected {
+    color: white;
+    background-color: black
+}

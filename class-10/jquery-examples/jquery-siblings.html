@@ -1,0 +1,54 @@
+<style>
+    div {
+        height: calc(100% / 12);
+        background-color: black;
+        margin: 1px;
+    }
+    
+    body {
+        background-color: hsl(35, 90%, 55%);
+    }
+
+</style>
+
+<div></div>
+
+<div style=""></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    /*
+        Use each() to loop through all elements in the collection. 
+        Provide each() with a function which will be run on each
+        of the elements. 
+    */
+    
+    // Add a click action to each div
+    $("div").click(function(){
+        // Clicking this div
+        $(this)
+            .css({backgroundColor:"black"}) // Sets the background color to black
+            .siblings()                     // filter the selection to siblings
+            .css({backgroundColor:"red"});  // set the background color to red for all siblings
+    });
+</script>
+
+
+
+
+
+
+
+
