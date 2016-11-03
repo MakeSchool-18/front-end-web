@@ -8,7 +8,7 @@
 
 ## Class outline
 
-- [Class 1](https://github.com/soggybag/Front-end-Web-Class-1) 
+- [Class 1](class-01) 
   - HTML, attributes, and values
   - Semantic HTML
 - [Class 2](https://github.com/soggybag/Front-end-Web-Class-2) 
