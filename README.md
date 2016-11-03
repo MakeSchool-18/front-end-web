@@ -11,30 +11,30 @@
 - [Class 1](class-01) 
   - HTML, attributes, and values
   - Semantic HTML
-- [Class 2](https://github.com/soggybag/Front-end-Web-Class-2) 
+- [Class 2](class-02) 
   - CSS Selectors
   - Basic CSS and Syntax
-- [Class 3](https://github.com/soggybag/Front-end-Web-Class-3)  
+- [Class 3](class-03)  
    - JavaScript intro basic syntax
-- [Class 4](https://github.com/soggybag/Front-end-Web-Class-4) 
+- [Class 4](class-04) 
   - CSS Box Model
   - Float and clear
-- [Class 5](https://github.com/soggybag/Front-end-Web-Class-5) 
+- [Class 5](class-05) 
   - CSS Position absolute and relative
   - CSS transitions
-- [Class 6](https://github.com/soggybag/Front-end-Web-Class-6) 
+- [Class 6](class-06) 
     - Designing with a grid
     - Build a grid system with CSS
-- [Class 7](https://github.com/soggybag/Front-end-Web-Class-7) 
+- [Class 7](class-07) 
     - jQuery intro
     - Handlebars templates 
-- [Class 8](https://github.com/soggybag/Front-end-Web-Class-8) 
+- [Class 8](class-08) 
     - Feedback and analysis
     - Using Sketch intro
-- [Class 9](https://github.com/soggybag/Front-end-Web-Class-9)  
+- [Class 9](class-09)  
     - Media Queries 
     - Responsive design
-- [Class 10](https://github.com/soggybag/Front-end-Web-Class-10) 
+- [Class 10](class-10) 
     - JSON 
     - jQuery 
     
